@@ -1,0 +1,200 @@
+/* Document styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:  sans-serif;
+  background-color: #f9fbfd;
+}
+
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(206, 17%, 28%);
+}
+
+.navbar {
+  background-color: #2C4251;
+}
+
+.navbar-brand.h1 {
+  color: #FF784F;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+/* Card styles (main content) */
+.maincard {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: hsl(206, 17%, 28%);
+  font-size: 18px;
+  margin: 0 auto 50px auto;
+  max-width: 800px;
+  padding: 30px 40px;
+}
+
+.maincard-header::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+.maincard-body {
+  min-height: 100px;
+}
+
+.maincard-header {
+  background-color: white;
+  text-align: center;
+}
+
+.maincard-footer {
+  text-align: center;
+  background-color: white;
+}
+
+.maincard-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+.maincard-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.checking {
+  display: inline-block;
+  width: 40%;
+  padding: 3px;
+}
+
+.thechoices {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#range {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Button styles */
+.button {
+  border: none;
+  background-color: #ff3c00;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button[disabled] {
+  cursor: default;
+  background: #ffffff;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Error message styles */
+p#errorvalitation {
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+}
+
+/* Selector styles */
+p.info-intruction{
+    font-size: small;
+    color: #ff3c00;
+}
+
+/* Password box styles */
+#pswd {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+}
+
+/* Style to initially not show selectors */
+#owndivbox {
+    display: none;
+}
+
+/* Media queries */
+@media (max-width: 690px) {
+  .button {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+
+  #pswd {
+    font-size: 1rem;
+  }
+
+  .maincard-footer {
+    font-size: 1rem;
+  }
+
+  .checking{
+    display: block;
+    width: 100%;
+  }
+
+}
+p {}

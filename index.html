@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Farhan's Password Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <div class="maincard">
+        <div class="maincard-header">
+          <h2>Generate a Password</h2>
+        </div>
+
+        <div class="maincard-body">
+          <textarea
+            readonly
+            id="pswd"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+
+        <div id="myOnlySelector" class="maincard-footer">
+            <button class="button" onclick="myownFunction()">Start Password Generator</button>
+        </div> 
+
+        <div id="owndivbox" class="maincard-footer">
+
+          <div class="thechoices">
+
+            <div class="checking">
+                <input type="checkbox" id="uppercasecheck">
+                <label for="checkUppercase">Uppercase letters</label>
+            </div>
+
+            <div class="checking">
+                <input type="checkbox" id="lowercasecheck">
+                <label for="checkLowercase">LowerCase letters</label>
+            </div>
+
+            <div class="checking">
+                <input type="checkbox" id="numericcheck">
+                <label for="checkNumeric">Numbers</label>
+            </div>
+
+            <div class="checking">
+                <input type="checkbox" id="specialcheck">
+                <label for="checkSpecial">Special characters</label>
+            </div>
+
+            <p class="info-intruction">Must Select At Least One Character Type.</p>
+      
+            <div class="form-group">
+                <label for="formControlRange">Please Choose Your Password Length</label>
+                <input id="range" type="range" name="rangeInput" min="8" max="128" onchange="inputtextupdate(this.value);">
+                <p id="textInput">68</p>
+            </div>
+
+            <p id="errorvalitation">Please select at least one option to create your password!</p>
+            
+            <button id="generation" class="button">Generate Password</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
