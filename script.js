@@ -13,12 +13,11 @@ function myownFunction() {
     }
 }
 
-// Display selection of range slider underneath slider
 function inputtextupdate(val) {
     document.getElementById('textInput').innerHTML=val; 
 }
 
-// Validate that at least one selection is made, if not print error message
+
 function validateSelection() {
     var upperCheck = document.getElementById("uppercasecheck").checked;
     var lowerCheck = document.getElementById("lowercasecheck").checked;
@@ -34,7 +33,7 @@ function validateSelection() {
     return {upperCheck, lowerCheck, numericCheck, specialCheck};
 }
 
-// Create character set to randomly choose from when generating password
+
 function getCharacterSet() {
     var checks = validateSelection();
     var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -59,7 +58,6 @@ function getCharacterSet() {
     return charSet;
 }
 
-// Write logic for password generation
 function generatePassword() {
     var charSet = getCharacterSet();
     var lengthString = document.getElementById("range").value;
@@ -73,14 +71,13 @@ function generatePassword() {
     return generatedPassword;
 }
 
-// Write password to the #password input
 function writePassword() {
     var checks = validateSelection();
     var password = generatePassword();
-    // Generate variable so that we can print password text
+   
     var passwordText = document.querySelector("#pswd");
 
-    // Assign result of generatePassword function as value of passwordText to print on card unless none of the checkboxes are checked, then return an empty string
+    
     if (checks.upperCheck || checks.lowerCheck || checks.numericCheck || checks.specialCheck){
         passwordText.value = password;
     } else if (!checks.upperCheck && !checks.lowerCheck && !checks.numericCheck && !checks.specialCheck){
@@ -88,8 +85,6 @@ function writePassword() {
     }
 }
 
-// Generate variable in order to add event listener
 var generateBtn = document.querySelector("#generation");
 
-// Add event listener to generate button to execute writePassword function on click
 generateBtn.addEventListener("click", writePassword);
