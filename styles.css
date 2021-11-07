@@ -32,17 +32,6 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
-.navbar {
-  background-color: #2C4251;
-}
-
-.navbar-brand.h1 {
-  color: #FF784F;
-}
-
-.navbar-brand {
-  color: white;
-}
 
 /* Card styles (main content) */
 .maincard {
